@@ -8,7 +8,10 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/employees")
-@CrossOrigin(origins = "https://flipshot-opal.vercel.app")
+@CrossOrigin(origins = {
+	    "https://flipshot-opal.vercel.app",
+	    "http://localhost:4200"
+	})
 public class MyController {
 
     private final EmployeeService employeeService;

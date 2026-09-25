@@ -6,7 +6,10 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/topics")
-@CrossOrigin(origins = "https://flipshot-opal.vercel.app")
+@CrossOrigin(origins = {
+	    "https://flipshot-opal.vercel.app",
+	    "http://localhost:4200"
+	})
 public class TopicController {
 
     private final TopicService topicService;
